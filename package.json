@@ -2,12 +2,13 @@
   "name": "ml-product-retriever",
   "version": "1.0.0",
   "description": "A helper module to load product data from MercadoLibre Development API",
-  "main": "src/index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "jest",
-    "enforce:run": "npm run build && npm run run",
-    "start": "node dist/index.js",
-    "build": "webpack --mode production"
+    "enforce:run": "npm run build && npm run start",
+    "start": "node dist/index.js --site_id=MLA --seller_id=179571326",
+    "build": "webpack --mode production",
+    "install:cli": "npm install -g ."
   },
   "bin": {
     "get-ml-products": "./dist/index.js"
