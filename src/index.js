@@ -55,7 +55,7 @@ const main = async function ({seller_id: sellerIds, site_id: siteId, extended}) 
 program
     .name(getScriptName(pkg, "./dist/index.js"))
     .usage("[global options]")
-    .requiredOption('--seller_id <seller>', 'Please define seller_id [ You could define many sellers in a comma separated list ] ', splitList)
+    .requiredOption('--seller_id <seller>', 'Please define seller_id [ You can define many sellers in a comma separated list ] ', splitList)
     .requiredOption('--site_id <site>', 'Please define site_id')
     .option('-e, --extended', 'display provider name for each product', false)
     .action((...args) => main(...args))
